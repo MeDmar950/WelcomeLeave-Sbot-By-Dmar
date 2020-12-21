@@ -5,7 +5,7 @@
 * $setwelcome `<#Channel/ID/Name>`
 * $setleave `<#Channel/ID/Name>`
 
-(https://cdn.discordapp.com/attachments/786624701996859412/790608635092664360/unknown.png)[Perview]
+# <img src="https://cdn.discordapp.com/attachments/786624701996859412/790608635092664360/unknown.png" />
 
 <table>
   <tr>
