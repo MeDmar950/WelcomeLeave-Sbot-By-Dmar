@@ -20,6 +20,7 @@ client.on('ready', _ => {
 client.on('message', async(message) => {
     if(message.author.bot) return;
     if(message.content.startsWith(prefix + 'setwelcome')) {
+        if(!message.author.hasPermissions("MANAGE_CHANNELS")) return;
         let args = message.content.split(' ');
         let channel = message.mentions.channels.first() || message.guild.channels.cache.find((ch) => ch.id === args.join(' ')) || message.guild.channels.cache.find((ch) => ch.name === args.join(' '));
         if(!channel) return message.channel.send(`**Usage: ${prefix}setwelcome \`<#Channel/ID/Name>\`**`);
@@ -41,6 +42,7 @@ client.on('message', async(message) => {
             }
         })
     } else if(message.content.startsWith(prefix + 'setleave')) {
+        if(!message.author.hasPermissions("MANAGE_CHANNELS")) return;
         let args = message.content.split(' ');
         let channel = message.mentions.channels.first() || message.guild.channels.cache.find((ch) => ch.id === args.join(' ')) || message.guild.channels.cache.find((ch) => ch.name === args.join(' '));
         if(!channel) return message.channel.send(`**Usage: ${prefix}setleave \`<#Channel/ID/Name>\`**`);
